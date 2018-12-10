@@ -1,0 +1,98 @@
+#single,
+#blog {
+	h5 {
+		font-size: 12px;
+		border-radius: 2px;
+		padding: 4px 10px;
+		display: inline-block;
+		background: $nf-blue;
+		border: 1px solid #ccc;
+		&.projects {
+			background: $nf-blue;
+		}
+		&.code {
+			background: $nf-blue;
+		}
+	}
+}
+#blog {
+	h3, h5 {
+		margin: 0 0 5px;
+	}
+	h3 {
+		color: $nf-blue;
+	}
+	p {
+		margin: 0;
+	}
+	article {
+		padding: 30px 0;
+		position: relative;
+		border-bottom: 1px solid #ccc;
+		&:last-of-type {
+			border: 0;
+		}
+	}
+	.link {
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		position: absolute;
+	}
+	.featured-hero {
+		float: left;
+		width: 100%;
+		img {
+			max-width: 100%;
+		}
+	}
+}
+#single {
+	h1 {
+		margin-bottom: 30px;
+	}
+	h5,
+	.tags,
+	.featured-hero {
+		margin-bottom: 10px;
+	}
+}
+@media (min-width: 768px) {
+	#blog {
+		.featured-hero {
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 180px;
+			position: absolute;
+			img {
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				max-width: 100%;
+				position: absolute;
+			}
+		}
+		article {
+			padding-left: 200px;
+		}
+	}
+	#single {
+		article {
+			float: left;
+			width: 68%;
+		}
+		aside {
+			width: 30%;
+			float: right;
+			padding: 20px 20px;
+			border-radius: 10px;
+			border: 1px solid #ccc;
+			box-shadow: 1px 1px 20px 1px #ccc;
+		}
+	}
+}

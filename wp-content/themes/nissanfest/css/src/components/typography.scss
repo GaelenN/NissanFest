@@ -1,0 +1,84 @@
+/* ==========Typography ========== */
+@import url(https://fonts.googleapis.com/css?family=Sunflower:300,500,700);
+
+$primary-font: 'Sunflower', "Arial", sans-serif; ;
+
+body {
+  font-family: $primary-font;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li, span, a, input, label, td, textarea {
+  font-family: $primary-font;
+  letter-spacing: 1px;
+}
+h1, h2, h3, h4, h5, h6 {
+font-weight: 700;
+}
+p, ul, li, span, a, input, label, td, textarea {
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 34px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+li {
+  font-size: 15px;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+a {
+  cursor: pointer;
+  color: $nf-blue;
+  text-decoration: none;
+  &:hover {
+    color: $nf-blue;
+  }
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 45px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+}

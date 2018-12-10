@@ -1,0 +1,50 @@
+#home {
+	section {
+		margin-bottom: 20px;
+	}
+	.post_content {
+		padding: 20px 0;
+	}
+	#general {
+		h3 {
+			.btn {
+				font-size: 16px;
+				display: inline-block;
+			}
+		}
+	}
+	#events {
+		h4 {
+			top: 0;
+			left: 0;
+			right: 0;
+			color: $white;
+			padding: 12px 0;
+			background: $nf-blue;
+			position: absolute;
+		}
+		p {
+			text-align: left;
+		}
+		li {
+			overflow: hidden;
+			text-align: center;
+			position: relative;
+			border-radius: 10px;
+			margin-bottom: 40px;
+			padding: 70px 15px 50px;
+			border: 1px solid $black;
+		}
+		.btn {
+			left: 50%;
+			bottom: 10px;
+			position: absolute;
+			transform: translateX(-50%);
+		}
+	}
+	@media (min-width: 768px) {
+		li {
+			width: 30%;
+		}
+	}
+}

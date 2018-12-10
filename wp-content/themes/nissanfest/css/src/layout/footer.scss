@@ -1,0 +1,54 @@
+/* ========== Footer ========== */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background: $black;
+  a,p {
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    margin: 0 0 10px;
+    font-weight: 300;
+  }
+  nav {
+    li {
+      display: block;
+      &:last-of-type {
+        a {
+          padding-right: 0;
+          border-right: none;
+        }
+      }
+    }
+    a {
+      padding: 0 10px;
+      border-right: 1px solid #fff;
+      &:hover {
+        color: $nf-red;
+      }
+    }
+  }
+  .copyright {
+    margin: 0;
+  }
+}
+@media (min-width: 768px) {
+  footer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    a,p {
+      margin: 0;
+    }
+    nav {
+      float: right;
+      li {
+        display: inline-block;
+      }
+    }
+    .copyright {
+      float: left;
+    }
+  }
+}
