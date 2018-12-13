@@ -331,13 +331,6 @@ form .driver-title,
 form .adddriver {
   display: none; }
 
-form #year,
-form #make,
-form #model,
-form #shirt,
-form #car-cat {
-  width: 47%; }
-
 form#autox #team-name, form#car-show #team-name {
   display: none; }
 
@@ -373,6 +366,14 @@ form .checkboxes {
   form .checkboxes li {
     line-height: 1;
     margin: 0 0 10px; }
+
+@media (min-width: 768px) {
+  form #year,
+  form #make,
+  form #model,
+  form #shirt,
+  form #car-cat {
+    width: 47%; } }
 
 .lds-spinner {
   color: #25579f;
@@ -549,6 +550,8 @@ img {
 
 .flexbox {
   display: flex; }
+  .flexbox.wrap {
+    flex-wrap: wrap; }
   .flexbox.align-center {
     align-items: center; }
   .flexbox.flex-start {
@@ -642,12 +645,8 @@ footer {
     font-weight: 300; }
   footer nav li {
     display: block; }
-    footer nav li:last-of-type a {
-      padding-right: 0;
-      border-right: none; }
   footer nav a {
-    padding: 0 10px;
-    border-right: 1px solid #fff; }
+    padding: 0 10px; }
     footer nav a:hover {
       color: #ed1d24; }
   footer .copyright {
@@ -665,6 +664,11 @@ footer {
       float: right; }
       footer nav li {
         display: inline-block; }
+        footer nav li:last-of-type a {
+          padding-right: 0;
+          border-right: none; }
+      footer nav a {
+        border-right: 1px solid #fff; }
     footer .copyright {
       float: left; } }
 
@@ -701,6 +705,7 @@ footer {
   text-align: left; }
 
 #home #events li {
+  width: 100%;
   overflow: hidden;
   text-align: center;
   position: relative;
@@ -716,7 +721,7 @@ footer {
   transform: translateX(-50%); }
 
 @media (min-width: 768px) {
-  #home li {
+  #home #events li {
     width: 30%; } }
 
 #single h5,
@@ -810,17 +815,10 @@ footer {
   margin-bottom: 50px; }
 
 #media form {
-  width: 50%;
   float: left; }
   #media form li {
     float: left;
     width: 100%; }
-
-#media .half {
-  float: left;
-  width: 46%; }
-  #media .half:nth-child(even) {
-    float: right; }
 
 #media .radio label {
   margin-right: 20px; }
@@ -836,3 +834,12 @@ footer {
 
 #media .btn {
   float: right; }
+
+@media (min-width: 768px) {
+  #media form {
+    width: 50%; }
+  #media .half {
+    float: left;
+    width: 46%; }
+    #media .half:nth-child(even) {
+      float: right; } }

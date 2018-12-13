@@ -13,16 +13,9 @@ footer {
   nav {
     li {
       display: block;
-      &:last-of-type {
-        a {
-          padding-right: 0;
-          border-right: none;
-        }
-      }
     }
     a {
       padding: 0 10px;
-      border-right: 1px solid #fff;
       &:hover {
         color: $nf-red;
       }
@@ -32,7 +25,7 @@ footer {
     margin: 0;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: $mobile) {
   footer {
     left: 0;
     right: 0;
@@ -45,6 +38,15 @@ footer {
       float: right;
       li {
         display: inline-block;
+        &:last-of-type {
+          a {
+            padding-right: 0;
+            border-right: none;
+          }
+        }
+      }
+      a {
+        border-right: 1px solid #fff;
       }
     }
     .copyright {

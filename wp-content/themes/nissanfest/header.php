@@ -25,6 +25,7 @@ if($regDate < $today) {
 					<span></span>
 					<span></span>
 				</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 				<?php 
 				if ( has_custom_logo() ) {
 					echo '<img src="'. esc_url( $logo[0] ) .'"  srcset="'. esc_url( $logo_2x[0] ) .' 2x">';
@@ -32,6 +33,7 @@ if($regDate < $today) {
 					echo '<h1>'. get_bloginfo( 'name' ) .'</h1>';
 				}
 				?>
+				</a>
 				<?php if(!$openReg): ?>
 			<p class="date">Regsitration Opens In <strong><?php echo (strtotime($regDate) - strtotime($today)) / 86400; ?> Days</strong></p>
 			<?php endif; ?>

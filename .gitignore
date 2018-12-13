@@ -1,6 +1,7 @@
 /node_modules
 /wp-admin
 /wp-includes
+/wp-content/uploads
 .DS_Store
 .installedExtras
 package-lock.json

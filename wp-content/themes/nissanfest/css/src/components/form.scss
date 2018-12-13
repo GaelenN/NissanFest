@@ -55,13 +55,6 @@ form {
     .adddriver {
         display: none;
     }
-    #year,
-    #make,
-    #model,
-    #shirt,
-    #car-cat {
-        width: 47%;
-    }
     &#autox,
     &#car-show {
         #team-name {
@@ -106,4 +99,13 @@ form {
             margin: 0 0 10px;
         }
     }
+    @media (min-width: $mobile) {
+        #year,
+        #make,
+        #model,
+        #shirt,
+        #car-cat {
+            width: 47%;
+        }
+	}
 }

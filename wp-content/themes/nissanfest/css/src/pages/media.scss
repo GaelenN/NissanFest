@@ -3,18 +3,10 @@
         margin-bottom: 50px;
     }
     form {
-        width: 50%;
         float: left;
         li {
             float: left;
             width: 100%;
-        }
-    }
-    .half {
-        float: left;
-        width: 46%;
-        &:nth-child(even) {
-            float: right;
         }
     }
     .radio {
@@ -33,5 +25,17 @@
     }
     .btn {
         float: right;
+    }
+    @media (min-width: $mobile) {
+        form {
+            width: 50%;
+        }
+        .half {
+            float: left;
+            width: 46%;
+            &:nth-child(even) {
+                float: right;
+            }
+        }
     }
 }

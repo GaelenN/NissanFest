@@ -27,6 +27,7 @@
 			text-align: left;
 		}
 		li {
+			width: 100%;
 			overflow: hidden;
 			text-align: center;
 			position: relative;
@@ -42,9 +43,11 @@
 			transform: translateX(-50%);
 		}
 	}
-	@media (min-width: 768px) {
-		li {
-			width: 30%;
+	@media (min-width: $mobile) {
+		#events {
+			li {
+				width: 30%;
+			}
 		}
-	}
+	  }
 }
