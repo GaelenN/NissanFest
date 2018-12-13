@@ -20,16 +20,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'wp_NissanFest');
+define('DB_NAME', 'pantheon');
 
 /** MySQL database username */
-define('DB_USER', 'wp_NissanFest');
+define('DB_USER', 'pantheon');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'wp_NissanFest');
+define('DB_PASSWORD', '4b3796a6e3b44492a6398b16a56a6ea9');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'dbserver.dev.0d35da4d-8836-4e0a-86d7-43924f315621.drush.in');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
