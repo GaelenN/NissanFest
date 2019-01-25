@@ -3,8 +3,12 @@ get_header();
 ?>
 <main id="entrants">
 <section id="banner">
-		<div class="container">
-			<?php the_post_thumbnail('feature-banner') ?>
+		<div class="container content">
+        <?php while ( have_posts() ): the_post();
+        the_post_thumbnail('feature-banner');
+        the_content(); 
+        endwhile;
+        ?>
 		</div>
 	</section>
 <section id="table">
@@ -52,6 +56,7 @@ get_header();
         $html .= "</li>";
         endwhile;
         echo $html;
+        wp_reset_postdata();
         ?>
         </ul>
         <a onclick="register('car-show');" class="btn">Register</a>

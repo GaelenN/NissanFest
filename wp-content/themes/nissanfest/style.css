@@ -536,6 +536,13 @@ main {
     clear: both;
     display: table; }
 
+.content ul {
+  list-style: disc;
+  padding-left: 30px; }
+
+.content li {
+  margin-bottom: 8px; }
+
 img {
   height: auto;
   max-width: 100%; }
