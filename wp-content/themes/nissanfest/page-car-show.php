@@ -59,7 +59,9 @@ get_header();
         wp_reset_postdata();
         ?>
         </ul>
+        <?php if ($entrants->post_count < 120 ):  ?>
         <a onclick="register('car-show');" class="btn">Register</a>
+        <?php endif; ?>
 	</div>
 </section>
 </main>

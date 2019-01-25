@@ -66,7 +66,9 @@ endwhile;
 echo $html;
 ?>
 </ul>
+<?php if($entrants->post_count < 25): ?>
 <a onclick="register('autox');" class="btn">Register</a>
+<?php endif; ?>
 </div>
 </section>
 </main>

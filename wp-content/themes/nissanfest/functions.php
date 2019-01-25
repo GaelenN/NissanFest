@@ -6,6 +6,4 @@ include_once "functions/nav-menus.php";
 include_once "functions/custom_post_type.php";
 include_once "functions/custom_taxonomy.php";
 
-
-
 ?>

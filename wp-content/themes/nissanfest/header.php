@@ -3,12 +3,14 @@
 $custom_logo_id = get_theme_mod( 'custom_logo' );
 $logo = wp_get_attachment_image_src( $custom_logo_id , 'logo' );
 $logo_2x = wp_get_attachment_image_src( $custom_logo_id , 'logo_2x' );
-$regDate = date('2018-11-15');
-$today = date('Y-m-d');
-$openReg = false;
-if($regDate < $today) {
-	$openReg = true;
-}
+
+$regDate = date('2019-02-01');
+    $today = date('Y-m-d');
+    $openReg = false;
+    if($regDate < $today) {
+        $openReg = true;
+    }
+
 ?>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
@@ -20,11 +22,13 @@ if($regDate < $today) {
 <body <?php body_class(); ?>>
 	<header>
 		<div class="container flexbox flex-start align-center">
+		<?php if($openReg): ?>
 			<a id="toggleNav" onclick="toggleNav();">
 					<span></span>
 					<span></span>
 					<span></span>
 				</a>
+				<?php endif; ?>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 				<?php 
 				if ( has_custom_logo() ) {
