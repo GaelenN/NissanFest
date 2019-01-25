@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="/wp-content/themes/nissanfest/style.css">
 <script type="text/javascript">
     function codeAddress() {
-        window.location.replace("/media?a=yes");
+        window.location.replace("/applications?m=yes");
     }
 </script>
 </head>

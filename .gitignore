@@ -4,3 +4,4 @@ ssh.txt
 .DS_Store
 .installedExtras
 package-lock.json
+wp-config-local.php
