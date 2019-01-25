@@ -25,7 +25,6 @@ return array(
 	'wp-block-library'                      => array(
 		'editor',
 		'lodash',
-		'moment',
 		'wp-api-fetch',
 		'wp-autop',
 		'wp-blob',
@@ -92,6 +91,7 @@ return array(
 		'wp-compose',
 		'wp-element',
 		'wp-is-shallow-equal',
+		'wp-priority-queue',
 		'wp-redux-routine',
 	),
 	'wp-date'                               => array(
@@ -132,7 +132,6 @@ return array(
 		'wp-viewport',
 	),
 	'wp-editor'                             => array(
-		'jquery',
 		'lodash',
 		'wp-tinymce-lists',
 		'wp-a11y',
@@ -213,6 +212,7 @@ return array(
 		'wp-element',
 		'wp-hooks',
 	),
+	'wp-priority-queue'                     => array(),
 	'wp-redux-routine'                      => array(),
 	'wp-rich-text'                          => array(
 		'lodash',
