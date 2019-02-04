@@ -35,13 +35,15 @@
 <option selected hidden>- Select Category -</option>
 <optgroup label="Nissan">
 <option value="Nissan GT-R" >R35 GT-R</option>
-<option value="Nissan S-Chassis">S13/S14/S15</option> 
 <option value="Nissan Skyline R31 to R34">Skyline R31 to R34</option> 
-<option value="Nissan Truck" >Truck/SUV</option>
-<option value="Nissan B-Chassis">B12/B13/B14/B15</option>
+<option value="Nissan S-Chassis">S13/S14/S15</option> 
 <option value="Nissan 300ZX" >300ZX</option>
-<option value="Nissan Z" >Z (350/370)</option>
+<option value="Nissan 370Z" >370z)</option>
+<option value="Nissan 350Z" >350z</option>
+<option value="Nissan Altima/Maxima">Altima/Maxima</option>
+<option value="Nissan B-Chassis">B12/B13/B14/B15</option>
 <option value="Nissan Other" >Other</option>
+<option value="Nissan Truck" >Truck/SUV</option>
 </optgroup>
 <optgroup label="Datsun">
 <option value="Datsun Z" >Classic Z</option>
