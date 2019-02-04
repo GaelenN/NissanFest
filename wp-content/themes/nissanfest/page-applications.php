@@ -66,6 +66,7 @@ $html = '';
                 <li>Use proper equipment (cell phones are not applicable)</li>
                 <li>Post your articles/videos within 30 days of the event</li>
                 <li>Coverage must include all parts of the event</li>
+                <li>Northwest Nissans reserves the right to use any content from the event for promotional purposes</li>
                 </ul>
                 </p>
             </div>
