@@ -55,14 +55,14 @@ $autox = new WP_Query( array (
 			<?php echo $post->post_content ?>
 		</div>
 	</section>
-	<?php 
+	<!-- <?php 
 	if($openReg): ?>
 	<section id="general">
 		<div class="container">
 			<h3>General Admission >> <a href="#" class="btn">Buy Now</a></h3>
 		</div>
 	</section>
-	<?php endif; ?>
+	<?php endif; ?> -->
 	<section id="events">
 		<div class="container">
 			<ul class="flexbox wrap space-between">
