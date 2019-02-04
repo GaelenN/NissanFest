@@ -18,6 +18,7 @@ get_header();
         <?php
         $args = array (
             'post_type' => 'entrant',
+            'posts_per_page' => -1,
             'tax_query' => array(
                 array(
                     'taxonomy' => 'nissanfest-events',
