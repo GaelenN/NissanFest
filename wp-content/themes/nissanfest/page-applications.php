@@ -89,7 +89,7 @@ $html = '';
     <?php if(!$_GET['v']):?>
     <section>
         <div class="container">
-            <form id="media_app" name="media_app" method="post" action="/wp-content/themes/nissanfest/actions/post-vendor.php" >
+            <form id="vendor_app" name="vendor_app" method="post" action="/wp-content/themes/nissanfest/actions/post-vendor.php" >
                 <h1>Vendor Application</h1>
                 <ul>
                     <li class="half">
