@@ -827,6 +827,13 @@ footer {
     float: left;
     width: 100%; }
 
+#media .details {
+  clear: both;
+  float: right;
+  margin-top: 50px; }
+  #media .details ul {
+    list-style-type: disc; }
+
 #media .radio label {
   margin-right: 20px; }
 
@@ -845,6 +852,9 @@ footer {
 @media (min-width: 768px) {
   #media form {
     width: 50%; }
+  #media .details {
+    width: 45%;
+    clear: none; }
   #media .half {
     float: left;
     width: 46%; }

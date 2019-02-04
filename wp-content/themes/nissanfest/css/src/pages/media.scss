@@ -9,6 +9,14 @@
             width: 100%;
         }
     }
+    .details {
+        clear: both;
+        float: right;
+        margin-top: 50px;
+        ul {
+            list-style-type: disc;
+        }
+    }
     .radio {
         label {
             margin-right: 20px;
@@ -29,6 +37,10 @@
     @media (min-width: $mobile) {
         form {
             width: 50%;
+        }
+        .details {
+            width: 45%;
+            clear: none;
         }
         .half {
             float: left;

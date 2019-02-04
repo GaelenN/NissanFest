@@ -58,6 +58,17 @@ $html = '';
                 </ul>
                 <a onclick="checkform(event);" class="btn">Submit</a>
             </form>
+            <div class="details">
+            <p>By Applying for the NissanFest media you agree to the following:</p>
+                <p>
+                <ul>
+                <li>Wear long pants and closed toed shoes</li>
+                <li>Use proper equipment (cell phones are not applicable)</li>
+                <li>Post your articles/videos within 30 days of the event</li>
+                <li>Coverage must include all parts of the event</li>
+                </ul>
+                </p>
+            </div>
         </div>
     </section>
     <?php else: ?>
