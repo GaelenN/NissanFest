@@ -8,7 +8,7 @@ get_header();
 			while (have_posts()) :
 				the_post();?>
 				<article>
-					<?php the_content(); ?>
+					<?php the_title(); ?>
 				</article>
 			<?php endwhile;
 		endif; ?>
