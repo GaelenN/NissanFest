@@ -17,6 +17,12 @@ $regDate = date('2019-02-01');
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
+	<meta property="og:title" content="<?php bloginfo('name'); ?>" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta property="og:image:width" content="2200" />
+	<meta property="og:image:height" content="1000" />
+	<meta property="og:url" content="http://nissanfest.us/" />
+	<meta property="og:image" content="http://nissanfest.us/wp-content/themes/nissanfest/img/nissanfest-social.png" />
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
