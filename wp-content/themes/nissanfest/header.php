@@ -46,6 +46,8 @@ $regDate = date('2019-02-01');
 				</a>
 				<?php if(!$openReg): ?>
 			<p class="date">Regsitration Opens In <strong><?php echo (strtotime($regDate) - strtotime($today)) / 86400; ?> Days</strong></p>
+			<?php else: ?>
+			<p class="date">April 13, 2019</p>
 			<?php endif; ?>
 			</div>
 	</header>
