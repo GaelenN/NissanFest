@@ -116,23 +116,23 @@ $html = '';
                         <label>Space Requirement:</label>
                         <ul class="radios">
                             <li>
-                                <input type="radio" name="size" />
+                                <input type="radio" name="size" value="10x10"/>
                                 10x10
                             </li>
                             <li>
-                                <input type="radio" name="size" />
+                                <input type="radio" name="size" value="10x20"/>
                                 10x20
                             </li>
                             <li>
-                                <input type="radio" name="size" />
+                                <input type="radio" name="size" value="10x30"/>
                                 10x30
                             </li>
                             <li>
-                                <input type="radio" name="size" />
+                                <input type="radio" name="size" value="20x30"/>
                                 20x30
                             </li>
                             <li>
-                                <input type="radio" name="size" />
+                                <input type="radio" name="size" value="custom"/>
                                 Custom
                             </li>
                     </ul>
