@@ -36,14 +36,16 @@ if ( $the_query->have_posts() ) {
     $show_cat = get_post_meta($post->ID, 'show_cat', true);
     $my_post = array(
         'ID'           => $post->ID,
-        'post_status'   => 'publish',
         'post_content' => $content,
         'meta_input' => $custom_fields,
     );
+    if($event[0]->slug !== 'team-tandem'):
+    $my_post['post_status'] = 'publish';
+    endif;
     wp_update_post( $my_post ); 
     echo "<h1>Thank you ". $name ."</h1>"; 
     echo "<h3>Your regsitration for the ".$_GET['item_name']." has now been ". $_GET['st'] ."</h3>"; 
-    echo "<p>If you have any questions please email us ASAP and we can anser them for you.  If you have any further questions about the event or details about your specific event, check out the <a href='/".$event[0]->slug."'>".$_GET['item_name']." Event Page</a> </p>";
+    echo "<p>If you have any questions please email us ASAP and we can answer them for you.  If you have any further questions about the event or details about your specific event, check out the <a href='/".$event[0]->slug."'>".$_GET['item_name']." Event Page</a> </p>";
 }
 } 
 $to = $email;
