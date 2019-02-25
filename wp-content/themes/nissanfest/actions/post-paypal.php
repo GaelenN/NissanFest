@@ -89,4 +89,8 @@ if ($_POST['cat'] !== 'team-tandem') {
 <script>
     document.getElementById("paypal").submit();
 </script>
+<?php } else { ?>
+    <script>
+    window.location.replace("<?php echo $actual_link ?>/thanks?email=<?php echo $driver['email'] ?>");
+    </script>
 <?php } ?>
