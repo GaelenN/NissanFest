@@ -6,11 +6,12 @@
 		padding: 20px 0;
 	}
 	#general {
+		margin-bottom: 70px;
 		h3 {
-			.btn {
-				font-size: 16px;
-				display: inline-block;
-			}
+		}
+		.btn {
+			float: left;
+			font-size: 16px;
 		}
 	}
 	#events {
@@ -49,5 +50,5 @@
 				width: 30%;
 			}
 		}
-	  }
+	}
 }

@@ -695,9 +695,11 @@ footer {
 #home .post_content {
   padding: 20px 0; }
 
-#home #general h3 .btn {
-  font-size: 16px;
-  display: inline-block; }
+#home #general {
+  margin-bottom: 70px; }
+  #home #general .btn {
+    float: left;
+    font-size: 16px; }
 
 #home #events h4 {
   top: 0;

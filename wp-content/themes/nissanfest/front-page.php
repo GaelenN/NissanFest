@@ -55,14 +55,13 @@ $autox = new WP_Query( array (
 			<?php echo $post->post_content ?>
 		</div>
 	</section>
-	<!-- <?php 
-	if($openReg): ?>
 	<section id="general">
 		<div class="container">
-			<h3>General Admission >> <a href="#" class="btn">Buy Now</a></h3>
+			<h3>General Admission</h3>
+			<p>General Admission tickets are available for pre-purchase for $10 below or at the door for $20 on the day of the event.  These tickets give you access to the main spectator areas as well as the pit areas.  Children under 5 are free. </p>
+			<a href="https://www.etix.com/ticket/p/8214524/april-13th2019-nissanfest-monroe-evergreen-speedway" class="btn" target="_blank">Buy Now</a>
 		</div>
 	</section>
-	<?php endif; ?> -->
 	<section id="events">
 		<div class="container">
 			<ul class="flexbox wrap space-between">
