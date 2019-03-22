@@ -68,11 +68,12 @@ $autox = new WP_Query( array (
 				<li>
 					<h4>Car Show</h4>
 					<p>The Car Show is a showcase of everything Nissan Related.  We restrict entries to Nissan/Infiniti and Datsun vehicles to showcase the generations of products that we all love and enjoy.</p>
-					<?php if($openReg && $car_show->post_count < 120): ?>
+					<!-- <?php if($openReg && $car_show->post_count < 120): ?>
 					<a onclick="register('car-show');" class="btn">Register</a>
 					<?php else: ?>
 					<a class="btn">Opening Soon</a>
-					<?php endif;?>
+					<?php endif;?> -->
+					<a disabled class="btn">SOLD OUT</a>
 				</li>
 				<li>
 					<h4>AutoX</h4>
@@ -86,11 +87,12 @@ $autox = new WP_Query( array (
 				<li>
 					<h4>Team Tandem</h4>
 					<p>The team tandem event is made up of teams of 3-4 drivers that drift in tandem around our course.  They are judged on their proximity and style as a team.  </p>
-					<?php if($openReg): ?>
+					<!-- <?php if($openReg): ?>
 					<a onclick="register('team-tandem');" class="btn">Register</a>
 					<?php else: ?>
 					<a class="btn">Opening Soon</a>
-					<?php endif; ?>
+					<?php endif; ?> -->
+					<a disabled class="btn">CLOSED</a>
 				</li>
 			</ul>
 		</div>

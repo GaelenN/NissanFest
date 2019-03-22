@@ -61,7 +61,8 @@ get_header();
         ?>
         </ul>
         <?php if ($entrants->post_count < 120 ):  ?>
-        <a onclick="register('car-show');" class="btn">Register</a>
+        <!-- <a onclick="register('car-show');" class="btn">Register</a> -->
+        <a disabled class="btn">SOLD OUT</a>
         <?php endif; ?>
 	</div>
 </section>

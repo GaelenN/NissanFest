@@ -56,7 +56,8 @@ $html = '';
                         <textarea name="questions"></textarea>
                     </li>
                 </ul>
-                <a onclick="checkform(event);" class="btn">Submit</a>
+                <!-- <a onclick="checkform(event);" class="btn">Submit</a> -->
+                <a disabled class="btn">CLOSED</a>
             </form>
         </div>
     </section>

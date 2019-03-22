@@ -123,7 +123,8 @@ endwhile;
 echo $html;
 ?>
 </ul>
-<a onclick="register('team-tandem');" class="btn">Register</a>
+<!-- <a onclick="register('team-tandem');" class="btn">Register</a> -->
+<a disabled class="btn">CLOSED</a>
 </div>
 <?php endif ?>
 </section>
