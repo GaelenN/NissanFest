@@ -68,7 +68,8 @@ echo $html;
 ?>
 </ul>
 <?php if($entrants->post_count < 25): ?>
-<a onclick="register('autox');" class="btn">Register</a>
+<!-- <a onclick="register('autox');" class="btn">Register</a> -->
+<a disabled class="btn">CLOSED</a>
 <?php endif; ?>
 </div>
 </section>

@@ -53,9 +53,16 @@ $html = '';
 <span class="make">Make</span>
 <span class="model">Model</span>
 <span>T-Shirt</span>
+<span>Paid</span>
 </li>
 <?php
 while ( $entrants->have_posts() ): $entrants->the_post();
+$paid = get_post_meta($post->ID, 'paid', true);
+if($paid !== NULL && $paid !== 'false'):
+    $paid = 'Yes';
+else:
+    $paid = 'No';
+endif;
 $html .= "<li class='flexbox'>";
 $html .= "<span>";
 $html .= get_post_meta($post->ID, 'team_name', true);
@@ -74,6 +81,9 @@ $html .= get_post_meta($post->ID, 'model', true);
 $html .= "</span>";
 $html .= "<span>";
 $html .= get_post_meta($post->ID, 'tshirt', true);
+$html .= "</span>";
+$html .= "<span>";
+$html .= $paid;
 $html .= "</span>";
 $html .= "</li>";
 endwhile;

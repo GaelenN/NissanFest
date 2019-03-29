@@ -78,11 +78,12 @@ $autox = new WP_Query( array (
 				<li>
 					<h4>AutoX</h4>
 					<p>The Autox portion is open to all makes and models, we’re looking for automotive enthusiasts that like to come out and have fun and enjoy some healthy competition. </p>
-					<?php if($openReg && $autox->post_count < 25): ?>
+					<!-- <?php if($openReg && $autox->post_count < 25): ?>
 					<a onclick="register('autox');" class="btn">Register</a>
 					<?php else: ?>
 					<a class="btn">Opening Soon</a>
-					<?php endif;?>
+					<?php endif;?> -->
+					<a disabled class="btn">CLOSED</a>
 				</li>
 				<li>
 					<h4>Team Tandem</h4>
