@@ -58,7 +58,7 @@ $html = '';
 <?php
 while ( $entrants->have_posts() ): $entrants->the_post();
 $paid = get_post_meta($post->ID, 'paid', true);
-if($paid !== NULL && $paid !== 'false'):
+if($paid !== NULL || $paid !== 'false'):
     $paid = 'Yes';
 else:
     $paid = 'No';
