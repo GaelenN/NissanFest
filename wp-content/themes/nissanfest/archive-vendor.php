@@ -17,7 +17,9 @@ $expiry = $expiry->format('D, j M Y 12:00:00 e');
     <section id="content">
         <div class="container">
             <h1>Vendor Application </h1>
-            <h3 style="display: none;">Thank you for your application</h3>
+            <?php if( isset($_COOKIE["vendor"]) ): ?>
+            <h3>Thank you for your application</h3>
+            <?php endif; ?>
         </div>
     </section>
     <section id="registration">
