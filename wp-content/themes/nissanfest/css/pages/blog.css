@@ -1,0 +1,81 @@
+/* ==========Colours ========== */
+#single h5,
+#blog h5 {
+  font-size: 12px;
+  border-radius: 2px;
+  padding: 4px 10px;
+  display: inline-block;
+  background: #25579f;
+  border: 1px solid #ccc; }
+  #single h5.projects,
+  #blog h5.projects {
+    background: #25579f; }
+  #single h5.code,
+  #blog h5.code {
+    background: #25579f; }
+
+#blog h3, #blog h5 {
+  margin: 0 0 5px; }
+
+#blog h3 {
+  color: #25579f; }
+
+#blog p {
+  margin: 0; }
+
+#blog article {
+  padding: 30px 0;
+  position: relative;
+  border-bottom: 1px solid #ccc; }
+  #blog article:last-of-type {
+    border: 0; }
+
+#blog .link {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute; }
+
+#blog .featured-hero {
+  float: left;
+  width: 100%; }
+  #blog .featured-hero img {
+    max-width: 100%; }
+
+#single h1 {
+  margin-bottom: 30px; }
+
+#single h5,
+#single .tags,
+#single .featured-hero {
+  margin-bottom: 10px; }
+
+@media (min-width: 768px) {
+  #blog .featured-hero {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 180px;
+    position: absolute; }
+    #blog .featured-hero img {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      max-width: 100%;
+      position: absolute; }
+  #blog article {
+    padding-left: 200px; }
+  #single article {
+    float: left;
+    width: 68%; }
+  #single aside {
+    width: 30%;
+    float: right;
+    padding: 20px 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 20px 1px #ccc; } }

@@ -20,17 +20,17 @@ var rename = require('gulp-rename');
 
 // Compile Our Sass
 gulp.task('sass', function() {
-    return gulp.src(url+'css/src/*.scss')
+    return gulp.src(url+'css/src/**/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest(url))
+        .pipe(gulp.dest(url+'css/'))
 });
 
 //Concatenate & Minify JS
 gulp.task('scripts', function() {
-    return gulp.src(url+'js/src/*.js')
+    return gulp.src(url+'js/src/**/*.js')
         .pipe(concat('nf.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest(url+'js'))
+        .pipe(gulp.dest(url+'js/'))
 });
 
 gulp.task('dev', ['sass', 'scripts']);

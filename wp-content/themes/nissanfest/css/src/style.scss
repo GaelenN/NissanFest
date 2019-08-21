@@ -7,20 +7,5 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
-@import "layout/reset";
-@import "components/variables";
-@import "components/colors";
-@import "components/typography";
-@import "components/buttons";
-@import "components/form";
-@import "components/loaders";
-@import "layout/header";
-@import "layout/content";
-@import "layout/footer";
-@import "pages/page";
-@import "pages/entrants";
-@import "pages/processing";
-@import "pages/front_page";
-@import "pages/blog";
-@import "pages/thanks";
-@import "pages/media";
+@import "components/components";
+@import "layout/layout";

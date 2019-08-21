@@ -1,0 +1,112 @@
+form {
+    overflow: hidden;
+    max-height: 1000px;
+    transition: $transition;
+    #form-title {
+        width: 100%;
+        font-size: 22px;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+    }
+    li {
+        padding: 0;
+        width: 100%;
+        position: relative;
+        margin: 0 0 20px;
+        list-style-type: none;
+    }
+    label {
+        font-size: 20px;
+        span {
+            font-size: 12px;
+            &.total {
+                font-size: inherit;
+            }
+        }
+    }
+    select,
+    input,
+    textarea {
+        width: 100%;
+        font-size: 16px;
+        padding: 5px 2%;
+        border-radius: 3px;
+        border: 1px solid $border-gray;
+    }
+    select {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+    }
+    button {
+        font-size: 15px;
+        margin: 0 auto;
+    }
+    .error {
+        left: 0;
+        top: 100%;
+        font-size: 11px;
+        position: absolute;
+        color: lighten($nf-red, 0.5);
+    }
+    .radio,
+    .checkboxes {
+        input {
+            float: left;
+            width: 20px;
+        }
+        li {
+            line-height: 1;
+            margin: 0 0 10px;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .radio {
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 50px;
+        }
+    }
+    &.success {
+        max-height: 0;
+    }
+    @media (min-width: $mobile) {
+        label {
+            margin-bottom: 6px;
+        }
+        li {
+            width: 33%;
+        }
+        .radio,
+        .checkboxes {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            li {
+                width: 50%;
+            }
+        }
+        &.car-show {
+            #make,
+            #model,
+            #year {
+                width: 21.7%;
+            }
+        }
+        #team-name,
+        #submit {
+            width: 100%;
+            clear: both;
+            .btn {
+                float: left;
+            }
+        }
+        #paypal-button-container {
+            max-width: 300px;
+        }
+    }
+}

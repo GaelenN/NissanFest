@@ -1,4 +1,4 @@
-<footer>
+<footer class="<?php echo (!$openReg) ? 'comingsoon' : ''; ?>">
 <div class="container">
 <nav>
 <?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container' => false) ); ?>
@@ -107,7 +107,7 @@
 </li>
 
 <input type="hidden" name="action" value="new_post" />
-<input type="hidden" name="paid" value="false" />
+<input type="hidden" name="paid" value="" />
 <input type="hidden" name="item_name" value="NissanFest Car Show" />
 <input type="hidden" name="item_number" value="NFCS2019" />
 <input type="hidden" name="amount" value="0.01" />

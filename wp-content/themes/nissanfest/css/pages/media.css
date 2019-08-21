@@ -1,0 +1,31 @@
+/* ==========Colours ========== */
+#content {
+  margin-top: 60px; }
+  #content h1 {
+    margin-bottom: 20px; }
+  #content h2 {
+    margin-bottom: 20px; }
+  #content ul {
+    list-style: disc;
+    padding-left: 30px;
+    margin-bottom: 40px; }
+    #content ul.flexbox {
+      width: 100%; }
+      #content ul.flexbox h4 {
+        width: 100%; }
+  #content li {
+    margin-bottom: 10px; }
+
+#registration h4 {
+  width: 100%;
+  margin-bottom: 15px; }
+
+#registration ul.flexbox {
+  width: 100%;
+  margin-bottom: 10px; }
+  #registration ul.flexbox li {
+    width: 32%;
+    margin-right: 1%; }
+    #registration ul.flexbox li li {
+      width: 50%;
+      margin-right: 0; }

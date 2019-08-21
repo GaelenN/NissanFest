@@ -3,7 +3,7 @@ function nf_event_taxonomy() {
 
     register_taxonomy(
         'nissanfest-events',
-        'entrant',
+        'driver',
         array(
             'label' => __( 'Category' ),
             'rewrite' => array( 'slug' => 'nissanfest-events' ),

@@ -2,7 +2,7 @@
 Contributors: andy7629, alexknowshtml, mgibbs189, jptoto, atheken, prileygraham
 Tags: postmark, email, smtp, notifications, wp_mail, wildbit
 Requires at least: 4.0
-Tested up to: 5.0
+Tested up to: 5.2
 Stable tag: trunk
 
 The *officially-supported* Postmark plugin for Wordpress.
@@ -12,6 +12,8 @@ The *officially-supported* Postmark plugin for Wordpress.
 If you're still sending email with default SMTP, you're blind to delivery problems! Postmark for Wordpress enables sites of any size to deliver and track WordPress notification emails reliably, with minimal setup time and zero maintenance.
 
 If you don't already have a Postmark account, you can get one in minutes, sign up at https://postmarkapp.com
+
+Check out our video on how to set up the Postmark for WordPress plugin [here](https://postmarkapp.com/webinars/postmark-wordpress).
 
 == Installation ==
 
@@ -88,6 +90,15 @@ And save the changes to the file.
 1. Postmark WP Plugin Settings screen.
 
 == Changelog ==
+= v1.11.5 =
+* Allows using POSTMARK_API_TEST in the plugin settings for generating test send requests that aren't actually delivered.
+
+= v1.11.4 =
+* Fixes handling of situation where call to Postmark API results in WP_Error instead of array for response, such as during incidents of the API being offline and not returning a response.
+
+= v1.11.3 =
+* Fixes log page display of From/To addresses including the From/To names. Only email addresses will now appear in logs page, to avoid confusion, while also preserving the sanitation of email addresses before inserting into db.
+
 = v1.11.2 =
 * Fixes no index error with track links check in wp_mail.
 

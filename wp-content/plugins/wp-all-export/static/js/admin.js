@@ -164,7 +164,7 @@
 
 	var initDraggable = function() {
 		function initGeneralDraggable($element) {
-			$element.find("li:not(.available_sub_section)").draggable({
+			$element.find("li:not(.available_sub_section):not(.wpallexport_disabled)").draggable({
 				appendTo: "body",
 				containment: "document",
 				helper: dragHelper,
@@ -790,7 +790,7 @@
 
 					if (postType != '')
 					{
-						if (postType == 'users'){							
+						if (postType == 'users'){
 							$('.wpallexport-user-export-notice').show();
 							showImportType = false; 						
 							$('.wpallexport-choose-file').find('.wpallexport-upload-resource-step-two').slideDown();
@@ -903,10 +903,11 @@
 					else{
 						$('.taxonomy_to_export_wrapper').slideUp();
 
-						if (postType == 'users')
+						if (postType == 'users' && !$('#pmxe_user_addon_free_installed').val()
+                    )
 						{
 							$('.wpallexport-user-export-notice').show();
-							$('.wpallexport-choose-file').find('.wpallexport-submit-buttons').hide();	
+							$('.wpallexport-choose-file').find('.wpallexport-submit-buttons').hide();
 						}
 						else if (postType == 'comments')
 						{
@@ -949,6 +950,12 @@
 		$('a.auto-generate-template').live('click', function(){
 
 			var export_type = $('input[name="cpt"]').val();
+
+            if (export_type == 'users') {
+
+            	$('#migrate-users-notice').slideDown();
+            	return false;
+			}
 
 			if(export_type == 'shop_order') {
 				$('#migrate-orders-notice').slideDown();

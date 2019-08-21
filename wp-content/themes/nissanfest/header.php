@@ -4,19 +4,19 @@ $custom_logo_id = get_theme_mod( 'custom_logo' );
 $logo = wp_get_attachment_image_src( $custom_logo_id , 'logo' );
 $logo_2x = wp_get_attachment_image_src( $custom_logo_id , 'logo_2x' );
 
-$regDate = date('2019-02-01');
+$regDate = get_field('registration_open', 'options');
     $today = date('Y-m-d');
     $openReg = false;
     if($regDate < $today) {
         $openReg = true;
     }
-
+$opensIn = (strtotime($regDate) - strtotime($today)) / 86400;
 ?>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
+	<title>NissanFest @ Evergreen Speedway - <?php echo $regDate ?></title>
 	<meta property="og:title" content="<?php bloginfo('name'); ?>" />
 	<meta property="og:image:type" content="image/jpeg" />
 	<meta property="og:image:width" content="2200" />
@@ -26,7 +26,7 @@ $regDate = date('2019-02-01');
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<header>
+	<header class="<?php echo (!$openReg) ? 'comingsoon' : ''; ?>">
 		<div class="container flexbox flex-start align-center">
 		<?php if($openReg): ?>
 			<a id="toggleNav" onclick="toggleNav();">
@@ -45,9 +45,9 @@ $regDate = date('2019-02-01');
 				?>
 				</a>
 				<?php if(!$openReg): ?>
-			<p class="date">Regsitration Opens In <strong><?php echo (strtotime($regDate) - strtotime($today)) / 86400; ?> Days</strong></p>
+			<p class="date">Regsitration Opens In <strong><?php echo $opensIn; ?> Day<?php if($opensIn > 1) { echo "s"; }; ?></strong></p>
 			<?php else: ?>
-			<p class="date">April 13, 2019</p>
+			<p class="date"><?php the_field('event_date', 'options') ?></p>
 			<?php endif; ?>
 			</div>
 	</header>
@@ -64,3 +64,8 @@ $regDate = date('2019-02-01');
 			<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container' => false) ); ?>
 		</nav>
 	</div>
+	<?php 
+	if(!$openReg) {
+		get_template_part( 'template-parts/partial', 'soon' );
+	}
+	?>

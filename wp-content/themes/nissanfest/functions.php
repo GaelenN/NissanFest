@@ -1,5 +1,6 @@
 <?php 
 include_once "functions/enqueue.php";
+include_once "functions/acf_settings.php";
 include_once "functions/theme_support.php";
 include_once "functions/images.php";
 include_once "functions/nav-menus.php";
