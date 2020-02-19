@@ -54,7 +54,7 @@ $autox = new WP_Query(
 				'terms'    => 'autox',
 			),
 		),
-	),
+	)
 );
 ?>
 <html <?php language_attributes(); ?> class="no-js">
