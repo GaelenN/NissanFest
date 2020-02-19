@@ -1,9 +1,8 @@
 /node_modules
-/wp-admin
-/wp-includes
+# /wp-admin
+# /wp-includes
 /wp-content/uploads
 ssh.txt
 .DS_Store
 .installedExtras
-package-lock.json
 wp-config-local.php
