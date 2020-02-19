@@ -36,7 +36,7 @@ $car_show = new WP_Query(
 				'terms'    => 'car-show',
 			),
 		),
-	),
+	)
 );
 $autox = new WP_Query( 
 	array (
