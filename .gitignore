@@ -1,4 +1,6 @@
 /node_modules
+/wp-admin
+/wp-includes
 /wp-content/uploads
 ssh.txt
 .DS_Store

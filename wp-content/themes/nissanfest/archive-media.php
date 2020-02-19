@@ -2,7 +2,7 @@
 get_header();
 wp_print_styles( array( 'nf_media' ) );
 
-$details = get_field('details','options');
+$details = get_field('event_details','options');
 $location = get_field('location','options');
 
 $eventDate = get_field('event_date', 'options');
@@ -22,7 +22,7 @@ $applicationEnd = get_field('media_end_date', 'options');
 
             <p>Application Requirements:</p>
             <ul>
-                <li>Have a Website (Facebook/Instagram are not allowed)</li>
+                <li>Have a Website (Facebook/Instagram are not acceptable)</li>
                 <li>Coverage must include all parts of the event</li>
                 <li>Post your articles/videos within 10 days of the event</li>
                 <li>Northwest Nissans reserves the right to use any content from the event for promotional purposes</li>

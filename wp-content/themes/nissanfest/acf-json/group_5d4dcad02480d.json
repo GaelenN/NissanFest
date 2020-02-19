@@ -255,9 +255,74 @@
             ]
         },
         {
+            "key": "field_5d5d7e3a4d6e2",
+            "label": "External Links",
+            "name": "external_links",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5d5d7e484d6e3",
+                    "label": "Facebook Page",
+                    "name": "facebook_page",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5d5d7e504d6e4",
+                    "label": "Facebook Event",
+                    "name": "facebook_event",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5d5d7e5b4d6e5",
+                    "label": "Tickets",
+                    "name": "tickets",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
             "key": "field_5d53169e81ed6",
-            "label": "Details",
-            "name": "details",
+            "label": "Event Details",
+            "name": "event_details",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -452,71 +517,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "key": "field_5d5d7e3a4d6e2",
-            "label": "External Links",
-            "name": "external_links",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5d5d7e484d6e3",
-                    "label": "Facebook Page",
-                    "name": "facebook_page",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_5d5d7e504d6e4",
-                    "label": "Facebook Event",
-                    "name": "facebook_event",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_5d5d7e5b4d6e5",
-                    "label": "Tickets",
-                    "name": "tickets",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "33",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
-                }
-            ]
         }
     ],
     "location": [
@@ -536,5 +536,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1566409216
+    "modified": 1582049452
 }

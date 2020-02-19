@@ -9,6 +9,7 @@ $eventYear = $eventYear->format('Y');
 $expiry = new DateTime($eventDate);
 $expiry = $expiry->format('D, j M Y 12:00:00 e');
 ?>
+<script src="https://www.paypal.com/sdk/js?client-id=<?php echo $nf_config['paypal'] ?>"></script>
 <main id="entrants">
     <section id="registration">
         <div class="container">
@@ -73,26 +74,35 @@ $expiry = $expiry->format('D, j M Y 12:00:00 e');
                 <input type="hidden" name="item_number" value="NFCS<?php echo $eventYear ?>" />
                 
             </form>
-            <script
-    src="https://www.paypal.com/sdk/js?client-id=AWtVquRtWcMDZpQLTF4GUARSwXLiKNesINgDwvUA2fW2zRq02SBoDmCoROBl88epamelEezETxzJMWBu">
-  </script>
-<script>
-  paypal.Buttons({
-    createOrder: function(data, actions) {
-      return actions.order.create({
-        purchase_units: [{
-          amount: {
-            value: <?php echo $details['autox']['cost'] ?>
-          }
-        }]
-      });
-    },
-    onApprove: function(data, actions) {
-        $('input[name="paid"]').val(data.orderID);
-        $('form[name="register"]').submit();
-    }
-  }).render('#paypal-button-container');
-</script>
+            <script>
+                paypal.Buttons({
+                    createOrder: function(data, actions) {
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: <?php echo $details['autox']['cost'] ?>
+                                }
+                            }]
+                        });
+                    },
+                    onApprove: function(data, actions) {
+                        return actions.order.capture().then(function(details) {
+                            $('input[name="paid"]').val(data.orderID);
+                            $('form[name="register"]').submit();
+                            // Call your server to save the transaction
+                            return fetch('/paypal-transaction-complete', {
+                                method: 'post',
+                                headers: {
+                                    'content-type': 'application/json'
+                                },
+                                body: JSON.stringify({
+                                    orderID: data.orderID
+                                })
+                            });
+                        });
+                    }
+                }).render('#paypal-button-container');
+            </script>
             <?php } ?>
         </div>
     </section>

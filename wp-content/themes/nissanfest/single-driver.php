@@ -2,7 +2,7 @@
 get_header();
 wp_print_styles( array('nf_driver') );
 
-$details = get_field('details','options');
+$details = get_field('event_details','options');
 ?>
 <main id="single" class="driver">
   <section>
@@ -43,7 +43,7 @@ $details = get_field('details','options');
   </section>
   <?php if( !get_field('paypal_id') ): ?>
   <script
-  src="https://www.paypal.com/sdk/js?client-id=AWtVquRtWcMDZpQLTF4GUARSwXLiKNesINgDwvUA2fW2zRq02SBoDmCoROBl88epamelEezETxzJMWBu">
+  src="https://www.paypal.com/sdk/js?client-id=<?php echo $nf_config['paypal'] ?>">
 </script>
 <script>
   paypal.Buttons({

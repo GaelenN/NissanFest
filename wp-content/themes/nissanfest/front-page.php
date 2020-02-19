@@ -20,51 +20,41 @@ $location = get_field('location','options');
 $links = get_field('external_links','options');
 $maximum = get_field('details','options');
 
-$car_show = new WP_Query( array (
-	'post_type' => 'entrant',
-	    'date_query' => array(
-        array(
-            'year'  => $eventYear,
-        ),
-    ),
-	'tax_query' => array(
-		array(
-			'taxonomy' => 'nissanfest-events',
-			'field'    => 'slug',
-			'terms'    => 'car-show',
+$car_show = new WP_Query( 
+	array (
+		'post_type' => 'driver',
+		'posts_per_page' => -1,
+		'date_query' => array(
+			array(
+				'year'  => $eventYear,
+			),
+		),
+		'tax_query' => array(
+			array(
+				'taxonomy' => 'nissanfest-events',
+				'field'    => 'slug',
+				'terms'    => 'car-show',
+			),
 		),
 	),
-	'meta_query' => array(
-		array(
-			'key'     => 'paid',
-			'value'   => 'false',
-			'compare' => 'NOT LIKE',
-		),
-	),
-)
 );
-$autox = new WP_Query( array (
-	'post_type' => 'entrant',
-	    'date_query' => array(
-        array(
-            'year'  => $eventYear,
-        ),
-    ),
-	'tax_query' => array(
-		array(
-			'taxonomy' => 'nissanfest-events',
-			'field'    => 'slug',
-			'terms'    => 'autox',
+$autox = new WP_Query( 
+	array (
+		'post_type' => 'driver',
+		'posts_per_page' => -1,
+		'date_query' => array(
+			array(
+				'year'  => $eventYear,
+			),
+		),
+		'tax_query' => array(
+			array(
+				'taxonomy' => 'nissanfest-events',
+				'field'    => 'slug',
+				'terms'    => 'autox',
+			),
 		),
 	),
-	'meta_query' => array(
-		array(
-			'key'     => 'paid',
-			'value'   => 'false',
-			'compare' => 'NOT LIKE',
-		),
-	),
-)
 );
 ?>
 <html <?php language_attributes(); ?> class="no-js">
@@ -115,41 +105,55 @@ wp_print_styles( array( 'nf_front' ) );
 			<p>This is our <?php echo $eventYear - 2012; ?>th annual NissanFest event at Evergreen Speedway, with the success of last year we are happy to bring it back with even more events and activities for everyone to enjoy! This year we’re bringing back the Car Show, Autox, Drift Competition and adding some other great activities for all automotive enthusiasts.  Northwestnissans.com has had one of the largest Nissan & Datsun spring meets for 9 years running that was being held at Golden Gardens Park in Seattle, WA.</p>
 		</div>
 	</section>
-	<!-- <section id="general">
+	<section id="general">
 		<div class="container">
 			<h3>General Admission</h3>
 			<p>General Admission tickets are available for pre-purchase for $10 below or at the door for $20 on the day of the event.  These tickets give you access to the main spectator areas as well as the pit areas.  Children under 5 are free. </p>
 			<a href="https://www.etix.com/ticket/p/8214524/april-13th2019-nissanfest-monroe-evergreen-speedway" class="btn" target="_blank">Buy Now</a>
 		</div>
-	</section> -->
-	<?php if( have_rows('event_types') ): ?>
+	</section>
+	<?php 
+	$events = get_field('event_details', 'option');
+	?>
 	<section id="events">
 		<div class="container">
 			<ul>
 			<?php 
-			while ( have_rows('event_types') ) : the_row(); 
-				$event = get_sub_field('registration');
-				if( $event->post_name === 'autox' ):
-					$post_count = $autox->post_count;
-				endif;
-				if( $event->post_name === 'car-show' ):
-					$post_count = $car_show->post_count;
-				endif;
+			foreach($events as $event => $details): 
+				if( $event === 'car-show' ):
+					$postcount = $car_show->found_posts;
+				endif; 
+				if( $event === 'autox' ):
+					$postcount = $autox->found_posts;
+				endif; 
 			?>
-				<li style="background-image: url('<?php echo get_the_post_thumbnail_url($event->ID); ?>')">
-					<?php if($post_count >= $maximum[$event->post_name]['maximum']): ?>
-						<h3 class="sold-out">SOLD OUT</h3>
-					<?php else: ?>
-						<a class="link" href="<?php the_permalink($event->ID); ?>"></a>
+				<li style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/img/nissanfest-<?php echo $event ?>.jpg')">
+					<?php if( $postcount < $details['maximum'] ): ?>
+						<a class="link" href="/<?php echo $event ?>"></a>
 					<?php endif; ?>
-					<h2><?php echo $event->post_title; ?></h2>
-					<h4>Register Now >></h4>
+					<?php if( $postcount >= $details['maximum'] ): ?>
+						<span class="sold-out">Sold Out</span>
+					<?php endif; ?>
+					<h2>
+						<?php 
+						echo strtoupper( str_replace('-',' ',$event) );
+						if( $postcount < $details['maximum'] ):
+							if( $event === 'team-tandem' ):
+								echo " - Apply Now";
+							else: 
+								echo " - $". $details['cost'];
+							endif;  
+						endif; 
+						?>
+						</h2>
+					<?php if( $postcount < $details['maximum'] ): ?>
+						<h4>Register Now >></h4>
+					<?php endif; ?>
 				</li>
-			<?php endwhile;?>
+			<?php endforeach; ?>
 			</ul>
 		</div>
 	</section>
-	<?php endif; ?>
 </main>
 <?php 
 get_footer(); 

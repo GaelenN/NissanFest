@@ -1,8 +1,8 @@
 === Export any WordPress data to XML/CSV ===
 Contributors: soflyy, wpallimport
 Requires at least: 4.1
-Tested up to: 5.2
-Stable tag: 1.2.4
+Tested up to: 5.3
+Stable tag: 1.2.5
 Tags: export, wordpress csv export, wordpress xml export, export woocommerce, migrate, export csv from wordpress, export xml from wordpress, advanced xml export, advanced csv export, export data, bulk csv export, export custom post type, export woocommerce products, export woocommerce orders, migrate woocommerce, csv export, export csv, xml export, export xml, csv exporter, datafeed
 
 Easily export any data from WordPress. Drag & drop to create a completely custom spreadsheet, CSV, or XML file.
@@ -14,6 +14,8 @@ Easily export any data from WordPress. Drag & drop to create a completely custom
 WP All Export features a three step export process and an intuitive drag & drop interface that makes complicated export tasks simple and fast.
 
 With WP All Export you can: export data for easy editing, migrate content from WordPress to another site, create a WooCommerce affiliate feed, generate filtered lists of WooCommerce orders, export the email addresses of new customers, create and publish customized WordPress RSS feeds - and much more.
+
+**[Click here to try WP All Export right now](https://www.wpallimport.com/try-export-free/).**
 
 [youtube https://www.youtube.com/watch?v=a-z0R-Ldkqo/]
 
@@ -53,7 +55,7 @@ For technical support from the developers, please consider purchasing WP All Exp
 
 * **Guaranteed technical support via e-mail.**
 
-[Upgrade to the Pro edition of WP All Export.](http://www.wpallimport.com/upgrade-to-wp-all-export-pro/?utm_source=export-users-addon-free&utm_medium=readme&utm_campaign=premium-support)
+[Upgrade to the Pro edition of WP All Export.](http://www.wpallimport.com/upgrade-to-wp-all-export-pro/?utm_source=export-plugin-free&utm_medium=readme&utm_campaign=premium-support)
 
 = Automatic Scheduling =
 
@@ -88,6 +90,8 @@ Either: -
 * Unzip wp-all-export.zip and upload the contents to /wp-content/plugins/, and then activate the plugin from the Plugins page in WordPress
 
 == Changelog ==
+= 1.2.5 =
+* bug fix: preserve existing admin body classes
 
 = 1.2.4 =
 * improvement: add support for User Export Add-On

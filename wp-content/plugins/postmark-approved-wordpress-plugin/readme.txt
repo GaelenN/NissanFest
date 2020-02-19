@@ -2,7 +2,7 @@
 Contributors: andy7629, alexknowshtml, mgibbs189, jptoto, atheken, prileygraham
 Tags: postmark, email, smtp, notifications, wp_mail, wildbit
 Requires at least: 4.0
-Tested up to: 5.2
+Tested up to: 5.3
 Stable tag: trunk
 
 The *officially-supported* Postmark plugin for Wordpress.
@@ -90,6 +90,9 @@ And save the changes to the file.
 1. Postmark WP Plugin Settings screen.
 
 == Changelog ==
+= v1.11.6 =
+* Updates server API token location hint in plugin settings.
+
 = v1.11.5 =
 * Allows using POSTMARK_API_TEST in the plugin settings for generating test send requests that aren't actually delivered.
 

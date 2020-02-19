@@ -2,7 +2,7 @@
 get_header();
 wp_print_styles( array('nf_driver') );
 
-$details = get_field('details','options');
+$details = get_field('event_details','options');
 ?>
 <main id="single" class="driver">
   <section>

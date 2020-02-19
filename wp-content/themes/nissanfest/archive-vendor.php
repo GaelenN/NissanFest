@@ -2,7 +2,7 @@
 get_header();
 wp_print_styles( array( 'nf_media' ) );
 
-$details = get_field('details','options');
+$details = get_field('event_details','options');
 $location = get_field('location','options');
 
 $eventDate = get_field('event_date', 'options');
@@ -81,9 +81,6 @@ $expiry = $expiry->format('D, j M Y 12:00:00 e');
                                 <li><input type="checkbox" name="power" value="power" data-cost="0" /> <span>Power</span></li>
                                 <li><input type="checkbox" name="show-car" value="show-car" data-cost="75" /> <span>Display Vehicle</span></li>
                             </ul>
-                        </li>
-                        <li>
-                            <label><strong>Total</strong> - <span class="total"></span></label>
                         </li>
                     </ul>
                     <ul class="flexbox wrap">

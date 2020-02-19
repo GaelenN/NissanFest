@@ -12,6 +12,9 @@ header {
     font-weight: 300;
     margin: 0 0 0 auto;
   }
+  h1 {
+    color: #fff;
+  }
 }
 #toggleNav {
   width: 40px;
@@ -54,6 +57,7 @@ header {
   transition: $transition;
   box-shadow: 0 0 10px 1px rgba(0,0,0,0.2);
   h1 {
+    color: #fff;
     text-align: center;
   }
   img {

@@ -2,7 +2,7 @@
 get_header();
 wp_print_styles( array( 'nf_entrants' ) );
 
-$details = get_field('details','options');
+$details = get_field('event_details','options');
 $eventDate = get_field('event_date', 'options');
 $eventYear = new DateTime($eventDate);
 $eventYear = $eventYear->format('Y');
