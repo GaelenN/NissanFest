@@ -2,19 +2,31 @@
 get_header();
 wp_print_styles( array( 'nf_entrants' ) );
 
-$details = get_field('details','options');
+$details = get_field('event_details','options');
 $eventDate = get_field('event_date', 'options');
 $eventYear = new DateTime($eventDate);
 $eventYear = $eventYear->format('Y');
 $expiry = new DateTime($eventDate);
 $expiry = $expiry->format('D, j M Y 12:00:00 e');
+$args = array (
+    'post_type' => 'driver',
+    'posts_per_page' => -1,
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'nissanfest-events',
+            'field'    => 'slug',
+            'terms'    => 'autox',
+        ),
+    ),
+);
+$entrants = new WP_Query( $args );
 ?>
 <script src="https://www.paypal.com/sdk/js?client-id=<?php echo $nf_config['paypal'] ?>"></script>
 <main id="entrants">
     <section id="registration">
         <div class="container">
             <h1><?php the_title() ?></h1>
-            <?php if(!isset($_COOKIE["autox"])) { ?>
+            <?php if(!isset($_COOKIE["autox"]) && ( $entrants->found_posts <= $details['autox']['maximum'] ) ) { ?>
             <form onsubmit="registerForm(event);" name="register" class="flexbox space-between wrap <?php echo $post->post_name ?>" >
                 <h2 id="form-title">Register Now </h2>
                 
@@ -120,22 +132,6 @@ $expiry = $expiry->format('D, j M Y 12:00:00 e');
     <?php endif; ?>
     <section class="table">
         <div class="container">
-            
-            <?php
-            $args = array (
-            'post_type' => 'driver',
-            'posts_per_page' => -1,
-            'tax_query' => array(
-                array(
-                    'taxonomy' => 'nissanfest-events',
-                    'field'    => 'slug',
-                    'terms'    => 'autox',
-                ),
-            ),
-            );
-            $entrants = new WP_Query( $args );
-            $html = '';
-            ?>
             <ul>
                 <li class='flexbox title'>
                     <span>Name</span>
