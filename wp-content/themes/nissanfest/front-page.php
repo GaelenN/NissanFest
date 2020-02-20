@@ -105,14 +105,16 @@ wp_print_styles( array( 'nf_front' ) );
 			<p>This is our <?php echo $eventYear - 2012; ?>th annual NissanFest event at Evergreen Speedway, with the success of last year we are happy to bring it back with even more events and activities for everyone to enjoy! This year we’re bringing back the Car Show, Autox, Drift Competition and adding some other great activities for all automotive enthusiasts.  Northwestnissans.com has had one of the largest Nissan & Datsun spring meets for 9 years running that was being held at Golden Gardens Park in Seattle, WA.</p>
 		</div>
 	</section>
+	<?php if( $links['tickets'] ): ?>
 	<section id="general">
 		<div class="container">
 			<h3>General Admission</h3>
 			<p>General Admission tickets are available for pre-purchase for $10 below or at the door for $20 on the day of the event.  These tickets give you access to the main spectator areas as well as the pit areas.  Children under 5 are free. </p>
-			<a href="https://www.etix.com/ticket/p/8214524/april-13th2019-nissanfest-monroe-evergreen-speedway" class="btn" target="_blank">Buy Now</a>
+			<a href="<?php echo $links['tickets'] ?>" class="btn" target="_blank">Pre-Purchase Tickets</a>
 		</div>
 	</section>
 	<?php 
+	endif;
 	$events = get_field('event_details', 'option');
 	?>
 	<section id="events">
