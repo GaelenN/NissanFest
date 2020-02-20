@@ -8,6 +8,10 @@
 #home #info .btn {
   display: inline-block; }
 
+#home #info .logo {
+  width: 100%;
+  margin-bottom: 50px; }
+
 #home #general {
   margin-bottom: 70px; }
   #home #general .btn {
@@ -67,3 +71,7 @@
     right: 20px; }
   #home #events li:hover .link {
     background: rgba(0, 0, 0, 0.3); }
+
+@media (min-width: 768px) {
+  #home #info .logo {
+    width: 600px; } }

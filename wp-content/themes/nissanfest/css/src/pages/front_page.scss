@@ -10,6 +10,10 @@
 		.btn {
 			display: inline-block;
 		}
+		.logo {
+			width: 100%;
+			margin-bottom: 50px;
+		}
 	}
 	#general {
 		margin-bottom: 70px;
@@ -79,5 +83,10 @@
 		}
 	}
 	@media (min-width: $mobile) {
+		#info {
+			.logo {
+				width: 600px;
+			}
+		}
 	}
 }
